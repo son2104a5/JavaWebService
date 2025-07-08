@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!--  Bootstrap CSS  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="text-left mb-3">
+        <a href="/add" class="btn btn-primary">Add New Student</a>
+    </div>
+    <table class="table table-bordered table-striped" border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="student : ${list}">
+                <td th:text="${student.id}"></td>
+                <td th:text="${student.name}"></td>
+                <td th:text="${student.email}"></td>
+                <td th:text="${student.phone}"></td>
+                <td th:text="${student.address}"></td>
+                <td>
+                    <a th:href="@{/edit/{id}(id=${student.id})}">Edit</a>
+                    <a th:href="@{/delete/{id}(id=${student.id})}">Delete</a>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
