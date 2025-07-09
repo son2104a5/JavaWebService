@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Danh sách phim</title>
+</head>
+<body>
+<h1>Danh sách phim</h1>
+
+<a th:href="@{/movies/add}">➕ Thêm phim mới</a>
+<br/><br/>
+
+<h2>Lọc lịch chiếu</h2>
+<form method="get" th:action="@{/showtimes}">
+    <label>Phim:</label>
+    <select name="movieId">
+        <option value="">-- Tất cả --</option>
+        <option th:each="m : ${movies}" th:value="${m.id}" th:text="${m.title}"
+                th:selected="${m.id == selectedMovieId}"></option>
+    </select>
+
+    <label>Ngày:</label>
+    <input type="date" name="date" th:value="${selectedDate}"/>
+
+    <label>Rạp:</label>
+    <select name="theaterId">
+        <option value="">-- Tất cả --</option>
+        <option th:each="t : ${theaters}" th:value="${t.id}" th:text="${t.name}"
+                th:selected="${t.id == selectedTheaterId}"></option>
+    </select>
+
+    <label>Phòng chiếu:</label>
+    <select name="screenRoomId">
+        <option value="">-- Tất cả --</option>
+        <option th:each="r : ${screenRooms}" th:value="${r.id}" th:text="${r.name}"
+                th:selected="${r.id == selectedScreenRoomId}"></option>
+    </select>
+
+    <button type="submit">🔍 Lọc</button>
+    <a th:href="@{/showtimes}">🔄 Xóa bộ lọc</a>
+</form>
+<hr/>
+<table border="1" cellpadding="8">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Tên phim</th>
+        <th>Thể loại</th>
+        <th>Thời lượng (phút)</th>
+        <th>Hành động</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="movie : ${movies}">
+        <td th:text="${movie.id}"></td>
+        <td th:text="${movie.title}"></td>
+        <td th:text="${movie.genre}"></td>
+        <td th:text="${movie.duration}"></td>
+        <td>
+            <a th:href="@{/movies/edit/{id}(id=${movie.id})}">✏️ Sửa</a>
+            |
+            <form th:action="@{/movies/delete/{id}(id=${movie.id})}" method="post" style="display:inline;">
+                <button type="submit" onclick="return confirm('Bạn có chắc muốn xóa phim này không?')">🗑️ Xóa</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
