@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>City List</h2>
+
+<form th:action="@{/cities}" method="get">
+    <input type="text" name="keyword" placeholder="Search city..."/>
+    <button type="submit">Search</button>
+</form>
+
+<a th:href="@{/cities/add}">Add New City</a>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Season</th>
+        <th>Area</th>
+        <th>Population</th>
+        <th>Country</th>
+        <th>Actions</th>
+    </tr>
+    <tr th:each="city : ${cities}">
+        <td th:text="${city.cityId}"></td>
+        <td th:text="${city.cityName}"></td>
+        <td th:text="${city.sesson}"></td>
+        <td th:text="${city.area}"></td>
+        <td th:text="${city.population}"></td>
+        <td th:text="${city.country.countryName}"></td>
+        <td>
+            <a th:href="@{'/cities/edit/' + ${city.cityId}}">Edit</a> |
+            <a th:href="@{'/cities/delete/' + ${city.cityId}}" onclick="return confirm('Confirm delete?')">Delete</a>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

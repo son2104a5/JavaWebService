@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 th:text="${city.cityId == null ? 'Add City' : 'Edit City'}"></h2>
+
+<form th:action="@{/cities/save}" th:object="${city}" method="post">
+    <input type="hidden" th:field="*{cityId}"/>
+
+    <label>City Name:</label>
+    <input type="text" th:field="*{cityName}" required/><br/>
+
+    <label>Season:</label>
+    <input type="text" th:field="*{sesson}" required/><br/>
+
+    <label>Area:</label>
+    <input type="number" step="0.01" th:field="*{area}" required/><br/>
+
+    <label>Population:</label>
+    <input type="number" th:field="*{population}" required/><br/>
+
+    <label>Country:</label>
+    <select th:field="*{country}">
+        <option th:each="country : ${countries}" th:value="${country}" th:text="${country.countryName}"></option>
+    </select><br/>
+
+    <button type="submit">Save</button>
+</form>
+
+<a th:href="@{/cities}">Back to list</a>
+</body>
+</html>

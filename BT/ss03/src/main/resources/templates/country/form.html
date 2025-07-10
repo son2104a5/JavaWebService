@@ -1,0 +1,11 @@
+<form th:action="@{/countries/save}" th:object="${country}" method="post">
+    <input type="hidden" th:field="*{countryId}"/>
+
+    <label>Name:</label>
+    <input type="text" th:field="*{countryName}"/>
+
+    <label>Continental:</label>
+    <input type="text" th:field="*{continental}"/>
+
+    <button type="submit">Save</button>
+</form>
