@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/food/add}" th:object="${foodItem}" method="post">
+  <input type="hidden" th:field="*{id}">
+  Tên: <input type="text" th:field="*{name}"><br>
+  Giá: <input type="number" step="0.01" th:field="*{price}"><br>
+  HSD: <input type="date" th:field="*{expirationDate}"><br>
+  Danh mục:
+  <select th:field="*{category}">
+    <option th:each="c : ${categories}" th:value="${c}" th:text="${c.categoryName}"></option>
+  </select><br>
+  <button type="submit">Lưu</button>
+</form>
+
+</body>
+</html>

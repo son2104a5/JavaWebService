@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Booking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>Add Booking</h1>
+    <form th:action="@{/booking/add}" th:object="${booking}" method="post">
+        <div class="form-group" th:if="${booking.flight != null}">
+            <div>Flight Number: <span th:text="${booking.flight.flightNumber}"></span></div>
+        </div>
+        <input type="hidden" th:field="*{flight.id}" />
+        <div class="form-group">
+            <label for="customerName">Customer Name</label>
+            <input type="text" id="customerName" th:field="*{customerName}" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="customerPhone">Customer Phone</label>
+            <input type="text" id="customerPhone" th:field="*{customerPhone}" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Booking</button>
+        <a href="/flight" class="btn btn-secondary">Back to Flight List</a>
+    </form>
+</div>
+</body>
+</html>

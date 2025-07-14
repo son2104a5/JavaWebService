@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="get">
+    <input name="keyword" placeholder="Tìm theo tên" value="${keyword}">
+    <select name="categoryId">
+        <option value="">Tất cả danh mục</option>
+        <th:block th:each="cate : ${categories}">
+            <option th:value="${cate.id}" th:selected="${categoryId == cate.id}" th:text="${cate.categoryName}"></option>
+        </th:block>
+    </select>
+    <button type="submit">Lọc</button>
+</form>
+
+<table>
+    <tr><th>Tên</th><th>Giá</th><th>HSD</th><th>Danh mục</th><th>Hành động</th></tr>
+    <tr th:each="item : ${foodItems.content}">
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.price}"></td>
+        <td th:text="${#dates.format(item.expirationDate, 'dd/MM/yyyy')}"></td>
+        <td th:text="${item.category.categoryName}"></td>
+        <td>
+            <a th:href="@{/food/edit/{id}(id=${item.id})}">Sửa</a>
+            <form th:action="@{/food/delete/{id}(id=${item.id})}" method="post" style="display:inline;">
+                <button type="submit">Xoá</button>
+            </form>
+        </td>
+    </tr>
+</table>
+
+<div>
+    <a th:href="@{/food(page=${foodItems.number - 1}, keyword=${keyword}, categoryId=${categoryId})}" th:if="${foodItems.hasPrevious()}">Trang trước</a>
+    <span>Trang [[${foodItems.number + 1}]] / [[${foodItems.totalPages}]]</span>
+    <a th:href="@{/food(page=${foodItems.number + 1}, keyword=${keyword}, categoryId=${categoryId})}" th:if="${foodItems.hasNext()}">Trang sau</a>
+</div>
+
+</body>
+</html>

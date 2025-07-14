@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flight List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>Flight List</h1>
+    <!--  Form Search  -->
+    <form th:action="@{/flight(page=${currentPage}, departure=${departure}, destination=${destination})}" method="get" class="form-inline mb-3">
+        <div class="form-group">
+            <label for="departure" class="mr-2">Departure:</label>
+            <input type="text" id="departure" name="departure" class="form-control mr-2" th:value="${departure}" placeholder="Search By Departure">
+        </div>
+        <div class="form-group">
+            <label for="destination" class="mr-2">Destination:</label>
+            <input type="text" id="destination" name="destination" class="form-control mr-2" th:value="${destination}" placeholder="Search By Destination">
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    <a href="/flight" class="btn btn-secondary ml-3">Reset</a>
+    </form>
+    <!--  Table List  -->
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Flight Number</th>
+                <th>Departure</th>
+                <th>Destination</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="flight : ${flights}" th:unless="${flights.isEmpty()}">
+                <td th:text="${flight.id}"></td>
+                <td th:text="${flight.flightNumber}"></td>
+                <td th:text="${flight.departure}"></td>
+                <td th:text="${flight.destination}"></td>
+                <td>
+                    <a th:href="@{/booking/add/{id}(id=${flight.id})}" class="btn btn-primary">Booking</a>
+                </td>
+            </tr>
+            <tr th:if="${flights.isEmpty()}">
+                <td colspan="5" class="text-center">No flights available</td>
+            </tr>
+        </tbody>
+    </table>
+    <!--  Pagination  -->
+    <nav th:if="${totalPages > 0}" aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item" th:classappend="${currentPage == 0} ? 'disabled'">
+                <a class="page-link" th:href="@{/flight(page=${currentPage - 1}, size=${pageSize}, departure=${departure}, destination=${destination})}"><<</a>
+            </li>
+            <li class="page-item" th:each="i : ${#numbers.sequence(0, totalPages - 1)}"
+                th:classappend="${i == currentPage} ? 'active'">
+                <a class="page-link"
+                   th:href="@{/flight(page=${i}, size=${pageSize}, departure=${departure}, destination=${destination})}"
+                   th:text="${i + 1}">
+                </a>
+            </li>
+            <li class="page-item" th:classappend="${currentPage == totalPages - 1} ? 'disabled'">
+                <a class="page-link" th:href="@{/flight(page=${currentPage + 1}, size=${pageSize}, departure=${departure}, destination=${destination})}">>></a>
+            </li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>
