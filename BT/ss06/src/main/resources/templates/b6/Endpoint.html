@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+  <tr>
+    <th>Endpoint</th>
+    <th>Phương thức</th>
+    <th>Thông số đầu vào</th>
+    <th>Kết quả trả về (ví dụ)</th>
+    <th>Trạng thái kiểm tra</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>/employees</td>
+    <td>GET</td>
+    <td>Không có</td>
+    <td>
+        <pre>[
+  {
+    "id": 1,
+    "name": "Nguyễn Văn A",
+    "email": "a@example.com",
+    "position": "Developer",
+    "salary": 1000.0
+  }
+]</pre>
+    </td>
+    <td>✅ Thành công</td>
+  </tr>
+  <tr>
+    <td>/employees/{id}</td>
+    <td>GET</td>
+    <td>
+      <strong>Path:</strong> id (Long) - ID nhân viên
+    </td>
+    <td>
+        <pre>{
+  "id": 1,
+  "name": "Nguyễn Văn A",
+  "email": "a@example.com",
+  "position": "Developer",
+  "salary": 1000.0
+}</pre>
+    </td>
+    <td>✅ Thành công</td>
+  </tr>
+  <tr>
+    <td>/employees</td>
+    <td>POST</td>
+    <td>
+      <strong>Body (JSON):</strong><br>
+      {
+      "name": "Nguyễn Văn B",<br>
+      "email": "b@example.com",<br>
+      "position": "Tester",<br>
+      "salary": 800.0
+      }
+    </td>
+    <td>
+        <pre>{
+  "id": 2,
+  "name": "Nguyễn Văn B",
+  "email": "b@example.com",
+  "position": "Tester",
+  "salary": 800.0
+}</pre>
+    </td>
+    <td>✅ Thành công</td>
+  </tr>
+  <tr>
+    <td>/employees/{id}</td>
+    <td>PUT</td>
+    <td>
+      <strong>Path:</strong> id (Long)<br>
+      <strong>Body (JSON):</strong><br>
+      {
+      "name": "Nguyễn Văn B Updated",<br>
+      "email": "b@example.com",<br>
+      "position": "QA Engineer",<br>
+      "salary": 900.0
+      }
+    </td>
+    <td>
+        <pre>{
+  "id": 2,
+  "name": "Nguyễn Văn B Updated",
+  "email": "b@example.com",
+  "position": "QA Engineer",
+  "salary": 900.0
+}</pre>
+    </td>
+    <td>✅ Thành công</td>
+  </tr>
+  <tr>
+    <td>/employees/{id}</td>
+    <td>DELETE</td>
+    <td>
+      <strong>Path:</strong> id (Long)
+    </td>
+    <td>
+      <i>204 No Content</i> (Không có dữ liệu trả về)
+    </td>
+    <td>✅ Thành công</td>
+  </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
