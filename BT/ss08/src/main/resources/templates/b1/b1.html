@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quy ước đặt tên Endpoint API Quản lý Sách</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f8f8f8;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background: #fff;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+        th {
+            background-color: #34495e;
+            color: white;
+        }
+        code {
+            background: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+<h1>Quy ước Đặt Tên Endpoint API Quản Lý Sách</h1>
+
+<h2>1. Tài nguyên: Sách (<code>/api/books</code>)</h2>
+<table>
+    <thead>
+    <tr>
+        <th>HTTP Method</th>
+        <th>Endpoint</th>
+        <th>Chức năng</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>GET</td>
+        <td>/api/books</td>
+        <td>Lấy danh sách tất cả sách</td>
+    </tr>
+    <tr>
+        <td>GET</td>
+        <td>/api/books/{id}</td>
+        <td>Lấy chi tiết một cuốn sách theo ID</td>
+    </tr>
+    <tr>
+        <td>POST</td>
+        <td>/api/books</td>
+        <td>Thêm một cuốn sách mới</td>
+    </tr>
+    <tr>
+        <td>PUT</td>
+        <td>/api/books/{id}</td>
+        <td>Cập nhật thông tin sách theo ID</td>
+    </tr>
+    <tr>
+        <td>DELETE</td>
+        <td>/api/books/{id}</td>
+        <td>Xóa một cuốn sách theo ID</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>2. Tài nguyên: Tác giả (<code>/api/authors</code>)</h2>
+<table>
+    <thead>
+    <tr>
+        <th>HTTP Method</th>
+        <th>Endpoint</th>
+        <th>Chức năng</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>GET</td>
+        <td>/api/authors</td>
+        <td>Lấy danh sách tất cả tác giả</td>
+    </tr>
+    <tr>
+        <td>GET</td>
+        <td>/api/authors/{id}</td>
+        <td>Lấy thông tin chi tiết một tác giả</td>
+    </tr>
+    <tr>
+        <td>POST</td>
+        <td>/api/authors</td>
+        <td>Thêm mới một tác giả</td>
+    </tr>
+    <tr>
+        <td>PUT</td>
+        <td>/api/authors/{id}</td>
+        <td>Cập nhật thông tin tác giả</td>
+    </tr>
+    <tr>
+        <td>DELETE</td>
+        <td>/api/authors/{id}</td>
+        <td>Xóa tác giả theo ID</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>3. Tài nguyên: Thể loại (<code>/api/categories</code>)</h2>
+<table>
+    <thead>
+    <tr>
+        <th>HTTP Method</th>
+        <th>Endpoint</th>
+        <th>Chức năng</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>GET</td>
+        <td>/api/categories</td>
+        <td>Lấy danh sách thể loại</td>
+    </tr>
+    <tr>
+        <td>GET</td>
+        <td>/api/categories/{id}</td>
+        <td>Lấy chi tiết thể loại</td>
+    </tr>
+    <tr>
+        <td>POST</td>
+        <td>/api/categories</td>
+        <td>Thêm mới thể loại</td>
+    </tr>
+    <tr>
+        <td>PUT</td>
+        <td>/api/categories/{id}</td>
+        <td>Cập nhật thể loại</td>
+    </tr>
+    <tr>
+        <td>DELETE</td>
+        <td>/api/categories/{id}</td>
+        <td>Xóa thể loại</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>4. Quy tắc chung khi đặt tên endpoint</h2>
+<ul>
+    <li>Không dùng động từ trong URL (động từ nằm ở HTTP method).</li>
+    <li>Plural form (dạng số nhiều): <code>books</code>, <code>authors</code>, <code>categories</code>.</li>
+    <li>Dùng `snake_case` hoặc `kebab-case` đồng nhất nếu cần thêm params: <code>/api/books?author_id=1</code>.</li>
+    <li>Không lồng nhiều cấp nếu không cần thiết. Ví dụ: <code>/api/books/1/authors</code> chỉ dùng khi thật sự có quan hệ lồng nhau cần xử lý.</li>
+</ul>
+</body>
+</html>
