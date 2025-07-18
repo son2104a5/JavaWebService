@@ -1,1 +1,6 @@
 2025-07-18 15:09:44 [restartedMain] ERROR com.data.LoggingExample - ERROR: Gặp lỗi khi lưu dữ liệu vào database
+2025-07-18 15:16:20 [restartedMain] ERROR com.data.LoggingExample - ERROR: Gặp lỗi khi lưu dữ liệu vào database
+2025-07-18 15:18:22 [restartedMain] ERROR com.data.LoggingExample - ERROR: Gặp lỗi khi lưu dữ liệu vào database
+2025-07-18 15:19:41 [restartedMain] ERROR com.data.LoggingExample - ERROR: Gặp lỗi khi lưu dữ liệu vào database
+2025-07-18 15:19:45 [restartedMain] ERROR com.data.LoggingExample - ERROR: Gặp lỗi khi lưu dữ liệu vào database
+2025-07-18 15:21:27 [http-nio-8080-exec-7] ERROR c.data.controller.DemoLogController - Đã ghi log error

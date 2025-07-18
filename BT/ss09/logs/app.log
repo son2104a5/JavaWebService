@@ -1,0 +1,202 @@
+2025-07-18 15:32:28 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-18 15:32:29 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44263def
+2025-07-18 15:32:29 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-18 15:32:29 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-18 15:32:29 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-18 15:32:30 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-18 15:34:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-18 15:34:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-07-18T15:41:42.144+07:00  INFO 17564 --- [ss09] [restartedMain] com.data.Ss09Application                 : Starting Ss09Application using Java 17.0.15 with PID 17564 (E:\JavaWebService\BT\ss09\build\classes\java\main started by HONG NHUNG in E:\JavaWebService\BT\ss09)
+2025-07-18T15:41:42.145+07:00 DEBUG 17564 --- [ss09] [restartedMain] com.data.Ss09Application                 : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-18T15:41:42.145+07:00  INFO 17564 --- [ss09] [restartedMain] com.data.Ss09Application                 : No active profile set, falling back to 1 default profile: "default"
+2025-07-18T15:41:42.613+07:00  INFO 17564 --- [ss09] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-18T15:41:42.618+07:00  INFO 17564 --- [ss09] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2025-07-18T15:41:42.779+07:00  INFO 17564 --- [ss09] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-18T15:41:42.809+07:00  INFO 17564 --- [ss09] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 658 ms
+2025-07-18T15:41:42.860+07:00  INFO 17564 --- [ss09] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-18T15:41:42.865+07:00  INFO 17564 --- [ss09] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-18T15:41:42.882+07:00  INFO 17564 --- [ss09] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-18T15:41:42.885+07:00  INFO 17564 --- [ss09] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-07-18T15:41:42.893+07:00  INFO 17564 --- [ss09] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e11d9b
+2025-07-18T15:41:42.894+07:00  INFO 17564 --- [ss09] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-07-18T15:41:42.895+07:00  WARN 17564 --- [ss09] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-18T15:41:42.896+07:00  WARN 17564 --- [ss09] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-18T15:41:42.896+07:00  INFO 17564 --- [ss09] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-18T15:41:42.925+07:00  INFO 17564 --- [ss09] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-18T15:41:42.927+07:00  INFO 17564 --- [ss09] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-18T15:41:42.957+07:00  WARN 17564 --- [ss09] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-18T15:41:43.142+07:00  INFO 17564 --- [ss09] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-18T15:41:43.171+07:00  INFO 17564 --- [ss09] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-18T15:41:43.179+07:00  INFO 17564 --- [ss09] [restartedMain] com.data.Ss09Application                 : Started Ss09Application in 1.148 seconds (process running for 240.589)
+2025-07-18T15:41:43.180+07:00 TRACE 17564 --- [ss09] [restartedMain] com.data.LoggingExample                  : TRACE: Bắt đầu xử lý logic chi tiết từng bước...
+2025-07-18T15:41:43.180+07:00 DEBUG 17564 --- [ss09] [restartedMain] com.data.LoggingExample                  : DEBUG: Giá trị biến x = 42
+2025-07-18T15:41:43.181+07:00  INFO 17564 --- [ss09] [restartedMain] com.data.LoggingExample                  : INFO: Ứng dụng khởi động thành công
+2025-07-18T15:41:43.182+07:00  WARN 17564 --- [ss09] [restartedMain] com.data.LoggingExample                  : WARN: Tài nguyên sắp hết dung lượng
+2025-07-18T15:41:43.182+07:00 ERROR 17564 --- [ss09] [restartedMain] com.data.LoggingExample                  : ERROR: Gặp lỗi khi lưu dữ liệu vào database
+2025-07-18T15:41:43.185+07:00  INFO 17564 --- [ss09] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-18T15:42:32.417+07:00  INFO 17564 --- [ss09] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (1 addition, 0 deletions, 3 modifications)
+2025-07-18T15:42:32.419+07:00  INFO 17564 --- [ss09] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-18T15:42:32.765+07:00  INFO 17564 --- [ss09] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-18T15:42:32.769+07:00  INFO 17564 --- [ss09] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-18T15:42:32.770+07:00  INFO 17564 --- [ss09] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-07-18T15:42:32.775+07:00  INFO 17564 --- [ss09] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-07-18T15:42:33.059+07:00 ERROR 17564 --- [ss09] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.model.processor.ImplicitModelHandler - Could not create component [encoder] of type [net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder] java.lang.ClassNotFoundException: net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[JSON_FILE] - No encoder set for the appender named "JSON_FILE".
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:353)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.data.Ss09Application.main(Ss09Application.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.model.processor.ImplicitModelHandler - Could not create component [encoder] of type [net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder] java.lang.ClassNotFoundException: net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[JSON_FILE] - No encoder set for the appender named "JSON_FILE".
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reportConfigurationErrorsIfNecessary(LogbackLoggingSystem.java:289)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:267)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:81)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:61)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:195)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:332)
+	... 24 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+		at ch.qos.logback.core.util.Loader.loadClass(Loader.java:116)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.doComplex(ImplicitModelHandler.java:134)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.handle(ImplicitModelHandler.java:94)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:241)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.traversalLoop(DefaultProcessor.java:90)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.process(DefaultProcessor.java:106)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.processModel(GenericXMLConfigurator.java:222)
+		at org.springframework.boot.logging.logback.SpringBootJoranConfigurator.processModel(SpringBootJoranConfigurator.java:136)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:178)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:123)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:66)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.configureByResourceUrl(LogbackLoggingSystem.java:298)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.lambda$loadConfiguration$2(LogbackLoggingSystem.java:260)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.withLoggingSuppressed(LogbackLoggingSystem.java:481)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:252)
+		... 28 common frames omitted
+
+2025-07-18T15:43:47.702+07:00  INFO 17808 --- [ss09] [restartedMain] com.data.Ss09Application                 : Starting Ss09Application using Java 17.0.15 with PID 17808 (E:\JavaWebService\BT\ss09\build\classes\java\main started by HONG NHUNG in E:\JavaWebService\BT\ss09)
+2025-07-18T15:43:47.715+07:00 DEBUG 17808 --- [ss09] [restartedMain] com.data.Ss09Application                 : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-18T15:43:47.717+07:00  INFO 17808 --- [ss09] [restartedMain] com.data.Ss09Application                 : No active profile set, falling back to 1 default profile: "default"
+2025-07-18T15:43:47.831+07:00  INFO 17808 --- [ss09] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-18T15:43:47.838+07:00  INFO 17808 --- [ss09] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-18T15:43:49.308+07:00  INFO 17808 --- [ss09] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-18T15:43:49.359+07:00  INFO 17808 --- [ss09] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 0 JPA repository interfaces.
+2025-07-18T15:43:50.356+07:00  INFO 17808 --- [ss09] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-18T15:43:50.379+07:00  INFO 17808 --- [ss09] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-18T15:43:50.379+07:00  INFO 17808 --- [ss09] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-18T15:43:50.467+07:00  INFO 17808 --- [ss09] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-18T15:43:50.468+07:00  INFO 17808 --- [ss09] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2626 ms
+2025-07-18T15:43:50.764+07:00  INFO 17808 --- [ss09] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-18T15:43:50.847+07:00  INFO 17808 --- [ss09] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-18T15:43:50.901+07:00  INFO 17808 --- [ss09] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-18T15:43:51.364+07:00  INFO 17808 --- [ss09] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-18T15:43:51.405+07:00  INFO 17808 --- [ss09] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-18T15:43:51.695+07:00  INFO 17808 --- [ss09] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51bb5124
+2025-07-18T15:43:51.698+07:00  INFO 17808 --- [ss09] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-18T15:43:51.759+07:00  WARN 17808 --- [ss09] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-18T15:43:51.761+07:00  WARN 17808 --- [ss09] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-18T15:43:51.796+07:00  INFO 17808 --- [ss09] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-18T15:43:52.418+07:00  INFO 17808 --- [ss09] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-18T15:43:52.432+07:00  INFO 17808 --- [ss09] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-18T15:43:52.553+07:00  WARN 17808 --- [ss09] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-18T15:43:53.320+07:00  INFO 17808 --- [ss09] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-18T15:43:53.381+07:00  INFO 17808 --- [ss09] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-18T15:43:53.399+07:00  INFO 17808 --- [ss09] [restartedMain] com.data.Ss09Application                 : Started Ss09Application in 7.177 seconds (process running for 9.574)
+2025-07-18T15:43:53.404+07:00 TRACE 17808 --- [ss09] [restartedMain] com.data.LoggingExample                  : TRACE: Bắt đầu xử lý logic chi tiết từng bước...
+2025-07-18T15:43:53.405+07:00 DEBUG 17808 --- [ss09] [restartedMain] com.data.LoggingExample                  : DEBUG: Giá trị biến x = 42
+2025-07-18T15:43:53.405+07:00  INFO 17808 --- [ss09] [restartedMain] com.data.LoggingExample                  : INFO: Ứng dụng khởi động thành công
+2025-07-18T15:43:53.405+07:00  WARN 17808 --- [ss09] [restartedMain] com.data.LoggingExample                  : WARN: Tài nguyên sắp hết dung lượng
+2025-07-18T15:43:53.406+07:00 ERROR 17808 --- [ss09] [restartedMain] com.data.LoggingExample                  : ERROR: Gặp lỗi khi lưu dữ liệu vào database
+2025-07-18T15:44:36.898+07:00  INFO 17808 --- [ss09] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-18T15:44:36.899+07:00  INFO 17808 --- [ss09] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-18T15:44:36.906+07:00  INFO 17808 --- [ss09] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2025-07-18T15:44:37.133+07:00 ERROR 17808 --- [ss09] [http-nio-8080-exec-1] c.data.exception.GlobalExceptionHandler  : Đã xảy ra lỗi: No static resource .
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-07-18T15:44:37.181+07:00  WARN 17808 --- [ss09] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .]
