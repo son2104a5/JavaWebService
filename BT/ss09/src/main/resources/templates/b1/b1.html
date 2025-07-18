@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tài liệu: Logging là gì?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        blockquote {
+            font-style: italic;
+            color: #555;
+            border-left: 4px solid #ccc;
+            padding-left: 10px;
+            margin-left: 0;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Logging là gì?</h1>
+<div class="section">
+    <p><strong>Logging</strong> (ghi log) là quá trình ghi lại thông tin liên quan đến hoạt động của hệ thống hoặc ứng dụng trong suốt vòng đời hoạt động. Các thông tin này thường được ghi ra console, file log, hoặc hệ thống giám sát để phục vụ cho việc theo dõi, phân tích và xử lý sự cố.</p>
+</div>
+
+<h2>Tại sao cần logging trong ứng dụng?</h2>
+
+<div class="section">
+    <h3>1. Hỗ trợ gỡ lỗi (Debugging)</h3>
+    <p>Khi ứng dụng xảy ra lỗi, log giúp lập trình viên truy vết quá trình hoạt động, xác định nguyên nhân gây lỗi và vị trí xảy ra vấn đề. Đây là công cụ không thể thiếu trong quá trình phát triển và bảo trì ứng dụng.</p>
+    <blockquote>Ví dụ: Log có thể ghi lại thông tin lỗi <code>NullPointerException</code> xảy ra ở dòng nào và trong tình huống nào.</blockquote>
+</div>
+
+<div class="section">
+    <h3>2. Giám sát và theo dõi hệ thống</h3>
+    <p>Log giúp theo dõi tình trạng hoạt động của ứng dụng theo thời gian thực hoặc trong quá khứ. Nhờ đó, DevOps hoặc admin có thể phát hiện các hành vi bất thường, hiệu suất chậm hoặc các sự kiện không mong muốn.</p>
+    <blockquote>Ví dụ: Cảnh báo khi có nhiều request thất bại liên tiếp hoặc truy cập trái phép.</blockquote>
+</div>
+
+<div class="section">
+    <h3>3. Lưu vết và kiểm tra (Audit)</h3>
+    <p>Trong các hệ thống yêu cầu cao về bảo mật hoặc pháp lý, log được dùng để lưu lại các hành động quan trọng như đăng nhập, thay đổi dữ liệu, giao dịch... để phục vụ việc điều tra và truy vết khi cần.</p>
+    <blockquote>Ví dụ: Ghi lại ai là người đã xoá một đơn hàng hoặc thay đổi thông tin khách hàng.</blockquote>
+</div>
+
+<h2>Tổng kết</h2>
+<p>Logging không chỉ là công cụ hỗ trợ kỹ thuật mà còn là phần <strong>cốt lõi</strong> để đảm bảo chất lượng, bảo mật và hiệu quả vận hành của hệ thống. Một hệ thống không có logging giống như <em>lái xe mà không có bảng đồng hồ</em> — bạn không biết chuyện gì đang xảy ra cho đến khi quá muộn.</p>
+
+</body>
+</html>

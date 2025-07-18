@@ -1,0 +1,9 @@
+2025-07-18 15:09:33 [restartedMain] INFO  com.data.Ss09Application - Starting Ss09Application using Java 17.0.15 with PID 17216 (E:\JavaWebService\BT\ss09\build\classes\java\main started by HONG NHUNG in E:\JavaWebService\BT\ss09)
+2025-07-18 15:09:33 [restartedMain] INFO  com.data.Ss09Application - No active profile set, falling back to 1 default profile: "default"
+2025-07-18 15:09:41 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-18 15:09:41 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@415e4c8
+2025-07-18 15:09:41 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-18 15:09:44 [restartedMain] INFO  com.data.Ss09Application - Started Ss09Application in 12.791 seconds (process running for 14.835)
+2025-07-18 15:09:44 [restartedMain] INFO  com.data.LoggingExample - INFO: Ứng dụng khởi động thành công
+2025-07-18 15:09:44 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-18 15:09:44 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

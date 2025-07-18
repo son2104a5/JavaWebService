@@ -1,0 +1,1 @@
+2025-07-18 14:28:07 [http-nio-9999-exec-1] ERROR c.e.d.a.APIRestControllerAdvice - 2025-07-18T14:28:07.669042700 - error - {error - 5=Email is empty!, error - 4=Address is empty!, error - 3=Password is empty!, error - 2=Gender is empty!, error - 1=Username is empty!, error - 0=Confirm password does not match!}

@@ -1,0 +1,7 @@
+2025-07-18 14:31:28 [restartedMain] INFO  c.e.d.DemoValidateResfulapiApplication - Starting DemoValidateResfulapiApplication using Java 17.0.1 with PID 9812 (D:\RIKKEI\LOP HOC\PTIT_K23B\Web Services\Session 09\demo_validate_resfulapi\build\classes\java\main started by BuiThanhHai in D:\RIKKEI\LOP HOC\PTIT_K23B\Web Services\Session 09\demo_validate_resfulapi)
+2025-07-18 14:31:28 [restartedMain] INFO  c.e.d.DemoValidateResfulapiApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-18 14:31:32 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-18 14:31:32 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3318c371
+2025-07-18 14:31:32 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-18 14:31:35 [restartedMain] INFO  c.e.d.DemoValidateResfulapiApplication - Started DemoValidateResfulapiApplication in 7.827 seconds (process running for 9.146)
+2025-07-18 14:31:44 [http-nio-9999-exec-1] INFO  c.e.d.s.impl.AccountServiceImpl - 2025-07-18T14:31:44.633321600 - getAccount 12
