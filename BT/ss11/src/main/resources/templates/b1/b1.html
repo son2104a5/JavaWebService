@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Security - Tổng quan</title>
+</head>
+<body>
+<h2>🔐 Vai trò của Spring Security</h2>
+<p>
+    Spring Security là một framework mạnh mẽ dùng để <strong>bảo vệ các ứng dụng Java (Spring)</strong> khỏi các mối đe dọa bảo mật như truy cập trái phép, giả mạo, lỗ hổng injection, v.v.
+</p>
+<p>
+    <em>Nói cách khác: "Tường lửa có não" cho các endpoint Java."</em>
+</p>
+
+<h2>✅ 4 Tính năng quan trọng của Spring Security</h2>
+<table border="1" cellpadding="10" cellspacing="0">
+    <thead>
+    <tr>
+        <th>Tính năng</th>
+        <th>Mô tả</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><strong>Xác thực (Authentication)</strong></td>
+        <td>Kiểm tra danh tính người dùng thông qua username/password, token, OAuth2, JWT...</td>
+    </tr>
+    <tr>
+        <td><strong>Phân quyền (Authorization)</strong></td>
+        <td>Kiểm soát quyền truy cập vào từng API dựa trên role, authority hoặc expression</td>
+    </tr>
+    <tr>
+        <td><strong>Bảo vệ chống CSRF</strong></td>
+        <td>Mặc định bật để ngăn chặn các cuộc tấn công Cross-Site Request Forgery</td>
+    </tr>
+    <tr>
+        <td><strong>Cấu hình linh hoạt</strong></td>
+        <td>Cho phép tuỳ chỉnh filter, rule, provider, encoder… gần như mọi thành phần bảo mật</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
