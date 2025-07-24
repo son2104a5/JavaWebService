@@ -1,10 +1,10 @@
-package com.data;
+package ra.edu;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PtitHnKs23BPtitHnk23048NguyenDacSon01ApplicationTests {
+class DemoSecurityRestfulApiApplicationTests {
 
     @Test
     void contextLoads() {
