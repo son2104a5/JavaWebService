@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Phân tích JWT & Rủi ro bảo mật</title>
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: #f9f9f9;
+            color: #2c3e50;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #34495e;
+        }
+        code {
+            background: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 12px;
+            border-left: 4px solid #3498db;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: #fff;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background-color: #2980b9;
+            color: white;
+        }
+        .danger {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        img {
+            max-width: 100%;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🔐 Phân tích JWT và Rủi ro Bảo mật</h1>
+
+<h2>1. Giải mã chuỗi JWT</h2>
+
+<p>Chuỗi JWT mẫu:</p>
+<pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkNvbmcgdHJ1bmciLCJpYXQiOjE1MTYyMzkwMjJ9.
+SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</code></pre>
+
+<p>Đây là một token hợp lệ theo định dạng JWT gồm 3 phần: <code>Header</code>, <code>Payload</code>, <code>Signature</code>.</p>
+
+<p>Giải mã chuỗi bằng công cụ <a href="https://jwt.io" target="_blank">jwt.io</a> sẽ hiển thị:</p>
+
+<img src="JWT.png" alt="" height="965" width="1919" />
+
+<p>(Hình ảnh giải mã minh họa lấy từ jwt.io với chuỗi mẫu trên)</p>
+
+<h2>2. Các trường trong Payload và Ý nghĩa</h2>
+
+<p>Sau khi giải mã phần <code>Payload</code> sẽ có kết quả như sau:</p>
+<pre><code>{
+  "sub": "1234567890",
+  "name": "Cong trung",
+  "iat": 1516239022
+}</code></pre>
+
+<table>
+    <thead>
+    <tr>
+        <th>Trường</th>
+        <th>Ý nghĩa</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><code>sub</code></td>
+        <td>Subject – ID của người dùng. Đại diện cho "ai" đang đăng nhập.</td>
+    </tr>
+    <tr>
+        <td><code>name</code></td>
+        <td>Tên người dùng (tùy chỉnh, không bắt buộc theo chuẩn).</td>
+    </tr>
+    <tr>
+        <td><code>iat</code></td>
+        <td>Issued At – thời điểm token được phát hành (timestamp UNIX).</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>3. Rủi ro bảo mật nếu để lộ thông tin nhạy cảm trong payload</h2>
+
+<ul>
+    <li class="danger">❗ JWT KHÔNG mã hóa nội dung – chỉ mã hóa dạng Base64URL → bất kỳ ai có token đều có thể đọc được.</li>
+    <li>🔓 Nếu để lộ thông tin như <code>email</code>, <code>role</code>, <code>userId</code> hoặc tệ hơn là <strong>CCCD</strong>, <strong>password</strong> thì sẽ gây ra lộ lọt dữ liệu nghiêm trọng.</li>
+    <li>🕒 Nếu token có <code>exp</code> quá dài, hacker có thể reuse token lâu dài nếu lấy được.</li>
+    <li>👀 Thông tin trong payload có thể bị phân tích để tấn công brute-force, leo thang quyền hoặc giả mạo nếu hệ thống xử lý không đúng.</li>
+    <li>🚫 KHÔNG nên nhét dữ liệu bí mật vào JWT nếu không được mã hóa bằng JWE.</li>
+</ul>
+
+<h2>🎯 Kết luận</h2>
+<p>JWT là một công cụ xác thực mạnh, nhưng cần hiểu đúng bản chất:</p>
+<ul>
+    <li>✅ Token có thể kiểm tra chữ ký, nhưng không che giấu nội dung.</li>
+    <li>✅ Không nên nhét thông tin nhạy cảm vào payload.</li>
+    <li>✅ Nên kết hợp với refresh token và sử dụng HTTPS để truyền tải token an toàn.</li>
+</ul>
+
+</body>
+</html>

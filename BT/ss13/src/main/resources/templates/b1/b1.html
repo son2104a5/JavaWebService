@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giới thiệu về JWT</title>
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            line-height: 1.6;
+            background: #f9f9f9;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        code {
+            background: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        pre {
+            background: #f0f0f0;
+            padding: 10px;
+            overflow-x: auto;
+            border-left: 4px solid #2980b9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+            background: #fff;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background: #2980b9;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>JWT là gì?</h1>
+<p><strong>JWT (JSON Web Token)</strong> là một chuẩn mở (RFC 7519) dùng để truyền tải thông tin dưới dạng JSON giữa các bên một cách an toàn, không trạng thái (stateless) và có thể xác minh.</p>
+
+<h2>1. Ưu và nhược điểm của JWT</h2>
+
+<h3>✅ Ưu điểm</h3>
+<table>
+    <tr><th>Ưu điểm</th><th>Mô tả</th></tr>
+    <tr><td>Stateless</td><td>Không cần lưu session phía server, tiết kiệm tài nguyên.</td></tr>
+    <tr><td>Gọn nhẹ</td><td>Token nhỏ, dễ truyền qua HTTP Header.</td></tr>
+    <tr><td>Đa nền tảng</td><td>Dùng tốt cho Web, Mobile, API,...</td></tr>
+    <tr><td>Xác thực bằng chữ ký</td><td>Chống giả mạo nội dung.</td></tr>
+    <tr><td>Payload tùy chỉnh</td><td>Có thể chứa thêm thông tin như userId, role,...</td></tr>
+</table>
+
+<h3>❌ Nhược điểm</h3>
+<table>
+    <tr><th>Nhược điểm</th><th>Mô tả</th></tr>
+    <tr><td>Không thể thu hồi</td><td>Không thể hủy token đã phát nếu không lưu blacklist.</td></tr>
+    <tr><td>Không mã hóa mặc định</td><td>Payload chỉ được encode, không được mã hóa → dễ bị đọc.</td></tr>
+    <tr><td>Kích thước lớn</td><td>Chứa nhiều thông tin hơn session ID truyền thống.</td></tr>
+    <tr><td>Hết hạn cần cơ chế refresh</td><td>Phải xây thêm hệ thống refresh token.</td></tr>
+</table>
+
+<h2>2. Cấu trúc của JWT</h2>
+<p>Một JWT có dạng:</p>
+<pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkPDtG5nIHRydW5nIiwiaWF0IjoxNTE2MjM5MDIyfQ.
+SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</code></pre>
+
+<p>Gồm 3 phần được nối bằng dấu chấm <code>.</code>:</p>
+
+<h3>🔹 1. Header</h3>
+<pre><code>{
+  "alg": "HS256",
+  "typ": "JWT"
+}</code></pre>
+
+<ul>
+    <li><code>alg</code>: Thuật toán ký (HMAC SHA256)</li>
+    <li><code>typ</code>: Loại token (luôn là <code>JWT</code>)</li>
+</ul>
+
+<h3>🔹 2. Payload</h3>
+<pre><code>{
+  "sub": "1234567890",
+  "name": "Công trung",
+  "iat": 1516239022
+}</code></pre>
+
+<p>Chứa các thông tin (claims):</p>
+<ul>
+    <li><strong>Registered claims:</strong> chuẩn định nghĩa sẵn như <code>iss</code>, <code>sub</code>, <code>exp</code>,...</li>
+    <li><strong>Custom claims:</strong> do lập trình viên thêm vào như <code>role</code>, <code>email</code>,...</li>
+</ul>
+
+<h3>🔹 3. Signature</h3>
+<pre><code>HMACSHA256(
+  base64UrlEncode(header) + "." + base64UrlEncode(payload),
+  secret
+)</code></pre>
+
+<p>Dùng để xác minh token không bị chỉnh sửa (phải có đúng key mới tạo được signature hợp lệ).</p>
+
+<h2>3. Các trường hợp sử dụng phổ biến của JWT</h2>
+<ul>
+    <li>🔐 <strong>Xác thực người dùng</strong> (authentication): đăng nhập, duy trì đăng nhập.</li>
+    <li>📦 <strong>Phân quyền API</strong> (authorization): phân quyền theo role.</li>
+    <li>💬 <strong>Single Sign-On (SSO)</strong>: chia sẻ xác thực giữa các hệ thống.</li>
+    <li>📱 <strong>Mobile app + Web API</strong>: truyền thống tin giữa các client khác nhau.</li>
+    <li>🔁 <strong>Refresh token</strong>: kết hợp access token & refresh token để giữ user đăng nhập lâu dài.</li>
+</ul>
+</body>
+</html>

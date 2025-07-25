@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quy trình xác thực JWT</title>
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: #f9f9f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        .flowchart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        .step {
+            background: #ecf0f1;
+            border-left: 5px solid #3498db;
+            padding: 15px 20px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .step strong {
+            color: #2980b9;
+        }
+
+        .arrow {
+            font-size: 24px;
+            margin: 5px 0;
+        }
+
+        code {
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🔐 Quy trình xác thực JWT giữa Client và Server</h1>
+<p>JWT được dùng phổ biến để xác thực người dùng trong các hệ thống Web/API. Dưới đây là quy trình chuẩn gồm 6 bước:</p>
+
+<div class="flowchart">
+
+    <div class="step">
+        <strong>Bước 1 – Đăng nhập (Login):</strong><br>
+        Client gửi thông tin đăng nhập (VD: <code>username</code>, <code>password</code>) tới Server qua API: <code>POST /api/login</code>.
+    </div>
+
+    <div class="arrow">⬇</div>
+
+    <div class="step">
+        <strong>Bước 2 – Xác thực & Tạo JWT:</strong><br>
+        Server kiểm tra thông tin đăng nhập. Nếu hợp lệ:<br>
+        👉 Tạo một <strong>JWT</strong> chứa thông tin người dùng (VD: <code>userId</code>, <code>role</code>, <code>exp</code>)<br>
+        👉 Ký token bằng secret hoặc private key.
+    </div>
+
+    <div class="arrow">⬇</div>
+
+    <div class="step">
+        <strong>Bước 3 – Trả JWT về cho client:</strong><br>
+        Server gửi JWT về client trong response:<br>
+        <code>{ "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." }</code><br>
+        Client có thể lưu token ở LocalStorage hoặc Cookie.
+    </div>
+
+    <div class="arrow">⬇</div>
+
+    <div class="step">
+        <strong>Bước 4 – Gửi request có đính kèm token:</strong><br>
+        Mỗi lần client gọi API (VD: <code>/api/profile</code>), nó gửi JWT kèm theo trong header:<br>
+        <code>Authorization: Bearer &lt;token&gt;</code>
+    </div>
+
+    <div class="arrow">⬇</div>
+
+    <div class="step">
+        <strong>Bước 5 – Server xác minh token:</strong><br>
+        Server sẽ:
+        <ul>
+            <li>Giải mã token (decode header + payload)</li>
+            <li>Xác thực chữ ký (signature)</li>
+            <li>Kiểm tra hạn token (<code>exp</code>) và thông tin bên trong</li>
+        </ul>
+        Nếu hợp lệ → tiếp tục xử lý request. Nếu không → trả lỗi 401/403.
+    </div>
+
+    <div class="arrow">⬇</div>
+
+    <div class="step">
+        <strong>Bước 6 – Trả dữ liệu:</strong><br>
+        Server trả về dữ liệu tương ứng nếu token hợp lệ.<br>
+        Nếu token hết hạn hoặc sai → yêu cầu đăng nhập lại.
+    </div>
+
+</div>
+
+<h2>🎯 Tóm tắt vai trò từng bước</h2>
+<ul>
+    <li><strong>Bước 1-3:</strong> Xác thực danh tính người dùng và phát hành token đại diện.</li>
+    <li><strong>Bước 4:</strong> Client tự gửi token cho mỗi request – stateless hoàn toàn.</li>
+    <li><strong>Bước 5:</strong> Server xác thực token để đảm bảo yêu cầu là hợp lệ.</li>
+    <li><strong>Bước 6:</strong> Trả kết quả tương ứng nếu token còn hiệu lực.</li>
+</ul>
+
+<p><em>Tip:</em> Để an toàn hơn nên kết hợp <strong>access token + refresh token</strong> để xử lý các tình huống như token hết hạn.</p>
+
+</body>
+</html>

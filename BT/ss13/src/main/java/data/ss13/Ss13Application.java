@@ -1,4 +1,4 @@
-package com.ss13;
+package data.ss13;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
